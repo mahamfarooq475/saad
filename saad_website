@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1>Hello, Good!</h1>
-        <p>Welcome to my first website built with GitHub and Vercel.</p>
-    </div>
-
+    <h1>Hello, Good!</h1>
 </body>
 </html>
