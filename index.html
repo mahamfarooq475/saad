@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Single Page Demo</title>
+<title>Marmasha for Catering Services</title>
 
 <style>
 *{
@@ -14,15 +15,18 @@
 }
 
 body{
-    background:#f5f7fa;
+    background:linear-gradient(135deg,#f8f9fa,#eef5ff);
 }
 
 nav{
-    background:#2563eb;
-    padding:18px;
+    background:#0d3b66;
+    padding:18px 40px;
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:40px;
+    position:sticky;
+    top:0;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 nav a{
@@ -34,12 +38,12 @@ nav a{
 }
 
 nav a:hover{
-    color:#ffe082;
+    color:#ffd166;
 }
 
 .page{
     display:none;
-    min-height:85vh;
+    min-height:88vh;
     justify-content:center;
     align-items:center;
     flex-direction:column;
@@ -51,32 +55,42 @@ nav a:hover{
     display:flex;
 }
 
+.arabic{
+    direction:rtl;
+    font-size:30px;
+    color:#555;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
 h1{
-    font-size:50px;
-    color:#2563eb;
+    font-size:55px;
+    color:#0d3b66;
     margin-bottom:20px;
 }
 
 p{
-    max-width:600px;
+    max-width:700px;
     font-size:20px;
     color:#555;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 button{
-    margin-top:30px;
-    padding:12px 30px;
+    margin-top:35px;
+    padding:14px 35px;
     border:none;
-    background:#2563eb;
+    background:#0d3b66;
     color:white;
-    border-radius:8px;
+    border-radius:50px;
     cursor:pointer;
-    font-size:16px;
+    font-size:17px;
+    transition:.3s;
 }
 
 button:hover{
-    background:#1d4ed8;
+    background:#145da0;
+    transform:translateY(-3px);
 }
 </style>
 
@@ -90,39 +104,86 @@ button:hover{
     <a onclick="showPage('contact')">Contact</a>
 </nav>
 
+<!-- HOME -->
+
 <div id="home" class="page active">
-    <h1>Home</h1>
-    <p>Welcome to my first website. Everything you see is inside a single HTML file.</p>
-    <button onclick="alert('Welcome to the Home Page!')">Click Me</button>
+
+    <div class="arabic">
+        مؤسسة مرمشة لخدمات الإعاشة
+    </div>
+
+    <h1>Marmasha for Catering Services</h1>
+
+    <p>
+        Welcome to Marmasha for Catering Services.
+        We are committed to delivering exceptional catering solutions with
+        quality, professionalism, and excellence for every occasion.
+    </p>
+
+    <button onclick="alert('Welcome to Marmasha for Catering Services!')">
+        Learn More
+    </button>
+
 </div>
+
+<!-- ABOUT -->
 
 <div id="about" class="page">
-    <h1>About</h1>
-    <p>This is the About page. JavaScript hides and shows each section instead of loading a new page.</p>
+
+    <h1>About Us</h1>
+
+    <p>
+        Marmasha for Catering Services provides professional catering
+        solutions tailored for corporate events, private gatherings,
+        institutions, and special occasions while maintaining the highest
+        standards of quality and customer satisfaction.
+    </p>
+
 </div>
+
+<!-- SERVICES -->
 
 <div id="services" class="page">
-    <h1>Services</h1>
-    <p>Here you could list your services, portfolio, or anything else you want visitors to see.</p>
+
+    <h1>Our Services</h1>
+
+    <p>
+        We offer complete catering solutions including event catering,
+        corporate meals, hospitality services, menu planning, and customized
+        food services designed to meet every client's unique requirements.
+    </p>
+
 </div>
 
+<!-- CONTACT -->
+
 <div id="contact" class="page">
-    <h1>Contact</h1>
-    <p>This is the Contact page. You could later add a contact form or social media links here.</p>
+
+    <h1>Contact Us</h1>
+
+    <p>
+        We'd love to hear from you.
+        Contact Marmasha for Catering Services for inquiries,
+        quotations, or to discuss your upcoming event.
+    </p>
+
 </div>
 
 <script>
+
 function showPage(pageId){
 
-    const pages=document.querySelectorAll('.page');
+    const pages=document.querySelectorAll(".page");
 
     pages.forEach(page=>{
-        page.classList.remove('active');
+        page.classList.remove("active");
     });
 
-    document.getElementById(pageId).classList.add('active');
+    document.getElementById(pageId).classList.add("active");
 }
+
 </script>
 
 </body>
 </html>
+```
