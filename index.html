@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> maham </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #4f46e5;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3730a3;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hello, Good!</h1>
-        <p>Welcome to my first website built with GitHub and Vercel.</p>
-    </div>
+  <div class="card">
+    <h1>Hello, Maham! 👋</h1>
+    <p>Welcome to your first website deployed with GitHub and Vercel.</p>
+
+    <button onclick="showMessage()">
+      Click Me
+    </button>
+  </div>
+
+  <script>
+    function showMessage() {
+      alert("🎉 Congratulations! Your JavaScript is working perfectly.");
+    }
+  </script>
 
 </body>
 </html>
