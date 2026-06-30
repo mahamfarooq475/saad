@@ -43,7 +43,9 @@ display:block;
 }
 
 section{
-padding:90px 8%;
+
+padding:120px 8%;
+position:relative;
 }
 
 /* ==========================
@@ -204,25 +206,25 @@ SECTION TITLE
 
 .title{
 
+max-width:800px;
+margin:0 auto 70px;
 text-align:center;
-margin-bottom:60px;
 
 }
 
 .title h2{
 
-font-size:42px;
+font-size:46px;
 color:#0b1f3a;
-margin-bottom:15px;
+margin-bottom:18px;
 
 }
 
 .title p{
 
-max-width:700px;
-margin:auto;
-color:#666;
+font-size:18px;
 line-height:1.8;
+color:#666;
 
 }
 
@@ -463,13 +465,95 @@ line-height:1.7;
 
 .about-container{
 
-grid-template-columns:1fr;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+align-items:center;
+gap:80px;
+max-width:1300px;
+margin:0 auto;
 
 }
 
-.about-card{
+.about-image{
 
-display:none;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.about-image img{
+
+width:100%;
+max-width:550px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.about-content{
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+}
+
+.about-content h2{
+
+font-size:46px;
+margin-bottom:25px;
+color:#0b1f3a;
+line-height:1.2;
+
+}
+
+.about-content p{
+
+font-size:17px;
+line-height:1.9;
+color:#666;
+margin-bottom:22px;
+
+}
+
+.about-boxes{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin-top:20px;
+
+}
+
+.info-box{
+
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.info-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+@media(max-width:992px){
+
+.about-container{
+
+grid-template-columns:1fr;
+gap:50px;
+
+}
+
+.about-content{
+
+text-align:center;
 
 }
 
@@ -479,8 +563,13 @@ grid-template-columns:1fr;
 
 }
 
+.about-image{
+
+order:-1;
+
 }
 
+}
 </style>
 
 <div class="about-container">
