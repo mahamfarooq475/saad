@@ -1,189 +1,1826 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marmasha for Catering Services</title>
+
+<title>Premium Corporate Demo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#f8f9fa,#eef5ff);
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+ul{
+list-style:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+section{
+padding:90px 8%;
+}
+
+/* ==========================
+NAVBAR
+========================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(8,18,35,.85);
+backdrop-filter:blur(12px);
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:white;
+letter-spacing:1px;
+
+}
+
+.logo span{
+
+color:#d4af37;
+
 }
 
 nav{
-    background:#0d3b66;
-    padding:18px 40px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    position:sticky;
-    top:0;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+display:flex;
+gap:35px;
+
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+
+color:white;
+font-weight:500;
+transition:.3s;
+
 }
 
 nav a:hover{
-    color:#ffd166;
+
+color:#d4af37;
+
 }
 
-.page{
-    display:none;
-    min-height:88vh;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:40px;
+/* ==========================
+BUTTONS
+========================== */
+
+.btn{
+
+display:inline-block;
+padding:15px 35px;
+border-radius:50px;
+font-weight:600;
+transition:.35s;
+margin-right:15px;
+
 }
 
-.page.active{
-    display:flex;
+.btn-primary{
+
+background:#d4af37;
+color:white;
+
 }
 
-.arabic{
-    direction:rtl;
-    font-size:30px;
-    color:#555;
-    margin-bottom:15px;
-    font-weight:bold;
+.btn-primary:hover{
+
+transform:translateY(-4px);
+
 }
 
-h1{
-    font-size:55px;
-    color:#0d3b66;
-    margin-bottom:20px;
+.btn-outline{
+
+border:2px solid white;
+color:white;
+
 }
 
-p{
-    max-width:700px;
-    font-size:20px;
-    color:#555;
-    line-height:1.7;
+.btn-outline:hover{
+
+background:white;
+color:#0b1f3a;
+
 }
 
-button{
-    margin-top:35px;
-    padding:14px 35px;
-    border:none;
-    background:#0d3b66;
-    color:white;
-    border-radius:50px;
-    cursor:pointer;
-    font-size:17px;
-    transition:.3s;
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(5,18,40,.70),rgba(5,18,40,.70)),
+url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
 }
 
-button:hover{
-    background:#145da0;
-    transform:translateY(-3px);
+.hero-content{
+
+max-width:750px;
+color:white;
+
 }
+
+.hero-content h3{
+
+font-size:18px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#d4af37;
+margin-bottom:18px;
+
+}
+
+.hero-content h1{
+
+font-size:62px;
+line-height:1.15;
+margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+font-size:19px;
+line-height:1.8;
+opacity:.95;
+margin-bottom:40px;
+
+}
+
+/* ==========================
+SECTION TITLE
+========================== */
+
+.title{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.title h2{
+
+font-size:42px;
+color:#0b1f3a;
+margin-bottom:15px;
+
+}
+
+.title p{
+
+max-width:700px;
+margin:auto;
+color:#666;
+line-height:1.8;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+header{
+
+padding:20px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero{
+
+text-align:center;
+justify-content:center;
+padding:30px;
+
+}
+
+.hero-content h1{
+
+font-size:42px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
+<header>
+
+<div class="logo">
+
+Prime<span>Solutions</span>
+
+</div>
+
 <nav>
-    <a onclick="showPage('home')">Home</a>
-    <a onclick="showPage('about')">About</a>
-    <a onclick="showPage('services')">Services</a>
-    <a onclick="showPage('contact')">Contact</a>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#divisions">Divisions</a>
+
+<a href="#services">Services</a>
+
+<a href="#contact">Contact</a>
+
 </nav>
 
-<!-- HOME -->
+</header>
 
-<div id="home" class="page active">
+<section class="hero" id="home">
 
-    <div class="arabic">
-        مؤسسة مرمشة لخدمات الإعاشة
-    </div>
+<div class="hero-content">
 
-    <h1>Marmasha for Catering Services</h1>
+<h3>Professional Business Solutions</h3>
 
-    <p>
-        Welcome to Marmasha for Catering Services.
-        We are committed to delivering exceptional catering solutions with
-        quality, professionalism, and excellence for every occasion.
-    </p>
+<h1>
+Delivering Excellence Across
+Hospitality & Smart Infrastructure
+</h1>
 
-   <button onclick="showPage('about')">
-    Learn More
+<p>
+
+Explore a business profile showcasing hospitality services,
+smart parking management, operational excellence, and
+innovative service solutions presented in a modern corporate
+experience.
+
+</p>
+
+<a href="#about" class="btn btn-primary">
+
+Learn More
+
+</a>
+
+<a href="#services" class="btn btn-outline">
+
+Our Services
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ===== ABOUT SECTION STARTS HERE ===== -->
+<section id="about">
+
+<div class="title">
+
+<h2>About Our Company</h2>
+
+<p>
+Committed to delivering excellence through innovative services,
+professional expertise, and customer focused solutions.
+</p>
+
+</div>
+
+<style>
+
+.about-container{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.about-image{
+
+position:relative;
+
+}
+
+.about-image img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.about-card{
+
+position:absolute;
+bottom:-30px;
+right:-30px;
+
+background:white;
+padding:25px;
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+max-width:240px;
+
+}
+
+.about-card h3{
+
+color:#0b1f3a;
+margin-bottom:8px;
+
+}
+
+.about-card p{
+
+font-size:14px;
+color:#666;
+line-height:1.7;
+
+}
+
+.about-content h2{
+
+font-size:42px;
+margin-bottom:25px;
+color:#0b1f3a;
+
+}
+
+.about-content p{
+
+line-height:1.9;
+margin-bottom:25px;
+color:#555;
+
+}
+
+.about-boxes{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:35px;
+
+}
+
+.info-box{
+
+background:white;
+padding:25px;
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.info-box:hover{
+
+transform:translateY(-10px);
+
+}
+
+.info-box h4{
+
+margin-bottom:12px;
+color:#0b1f3a;
+
+}
+
+.info-box p{
+
+font-size:15px;
+line-height:1.7;
+
+}
+
+@media(max-width:900px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.about-card{
+
+display:none;
+
+}
+
+.about-boxes{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80">
+
+<div class="about-card">
+
+<h3>Professional Excellence</h3>
+
+<p>
+
+Delivering quality services through innovation,
+customer satisfaction, and operational excellence.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="about-content">
+
+<h2>
+
+Building Better Experiences Through Smart Solutions
+
+</h2>
+
+<p>
+
+At Marmasha, we invite you on an unforgettable culinary journey
+through the heart of Arabian cuisine. Nestled in the historic and
+vibrant Al Balad district of Jeddah, our charming eatery promises
+an authentic experience celebrating the traditions of shawarma
+and fresh flavorful juices.
+
+</p>
+
+<p>
+
+The journey commenced with the vision to enhance services
+within the Kingdom of Saudi Arabia by offering comprehensive
+solutions. By attentively addressing market needs and implementing
+smart business practices, the organization strives to deliver
+innovative and efficient service experiences.
+
+</p>
+
+<div class="about-boxes">
+
+<div class="info-box">
+
+<h4>Mission</h4>
+
+<p>
+
+Provide comprehensive solutions that exceed industry
+standards while ensuring convenience,
+quality, safety and operational excellence.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>Vision</h4>
+
+<p>
+
+To revolutionize service industries through
+innovative technology, smart business
+practices and customer focused solutions.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>Philosophy</h4>
+
+<p>
+
+Innovation, dedication to customer satisfaction,
+continuous improvement and listening
+attentively to market needs.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>Goals</h4>
+
+<p>
+
+Pioneer innovative systems, establish new
+standards, build strong partnerships and
+deliver exceptional experiences.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== DIVISIONS SECTION STARTS HERE ===== -->
+    <section id="divisions">
+
+<style>
+
+.division-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:35px;
+
+}
+
+.division-card{
+
+background:white;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.division-card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,.15);
+
+}
+
+.division-card img{
+
+width:100%;
+height:270px;
+object-fit:cover;
+
+}
+
+.division-content{
+
+padding:35px;
+
+}
+
+.division-content span{
+
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:8px 18px;
+border-radius:30px;
+font-size:14px;
+margin-bottom:18px;
+
+}
+
+.division-content h3{
+
+font-size:30px;
+margin-bottom:20px;
+color:#0b1f3a;
+
+}
+
+.division-content p{
+
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
+
+}
+
+.division-btn{
+
+display:inline-block;
+background:#0b1f3a;
+color:white;
+padding:14px 28px;
+border-radius:40px;
+transition:.3s;
+
+}
+
+.division-btn:hover{
+
+background:#d4af37;
+
+}
+
+</style>
+
+<div class="title">
+
+<h2>Our Business Divisions</h2>
+
+<p>
+
+Combining hospitality excellence with smart operational solutions to deliver exceptional experiences across multiple industries.
+
+</p>
+
+</div>
+
+<div class="division-grid">
+
+<div class="division-card">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80">
+
+<div class="division-content">
+
+<span>Hospitality</span>
+
+<h3>Catering & Hospitality Services</h3>
+
+<p>
+
+At Marmasha, we invite you on an unforgettable culinary journey through the heart of Arabian cuisine. Prepare your taste buds for an explosion of flavours as expert chefs craft shawarmas using tender meat, aromatic spices, and fresh ingredients while serving refreshing juices.
+
+</p>
+
+<a href="#hospitality" class="division-btn">
+
+Explore Hospitality
+
+</a>
+
+</div>
+
+</div>
+
+<div class="division-card">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80">
+
+<div class="division-content">
+
+<span>Infrastructure</span>
+
+<h3>Smart Parking Management</h3>
+
+<p>
+
+Providing innovative parking management solutions through smart technologies, operational excellence, parking automation, enforcement systems, and comprehensive management services designed to improve efficiency and customer experience.
+
+</p>
+
+<a href="#parking" class="division-btn">
+
+Explore Solutions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+HOSPITALITY SECTION
+=========================== -->
+
+<section id="hospitality">
+
+<style>
+
+.feature-wrap{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.feature-wrap img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(0,0,0,.12);
+
+}
+
+.feature-content h2{
+
+font-size:45px;
+margin-bottom:25px;
+color:#0b1f3a;
+
+}
+
+.feature-content p{
+
+line-height:1.9;
+color:#555;
+margin-bottom:35px;
+
+}
+
+.feature-list{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+
+}
+
+.feature-item{
+
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.feature-item:hover{
+
+transform:translateY(-8px);
+
+}
+
+.feature-item h4{
+
+margin-bottom:12px;
+color:#0b1f3a;
+
+}
+
+.feature-item p{
+
+font-size:14px;
+
+}
+
+@media(max-width:900px){
+
+.feature-wrap{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<div class="feature-wrap">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+<div class="feature-content">
+
+<h2>Hospitality Experience</h2>
+
+<p>
+
+Experience authentic Arabian cuisine prepared with premium ingredients and rich traditional flavours. Every dish reflects dedication to quality, freshness, and customer satisfaction while creating memorable dining experiences.
+
+</p>
+
+<div class="feature-list">
+
+<div class="feature-item">
+
+<h4>Authentic Arabian Cuisine</h4>
+
+<p>Inspired by traditional recipes.</p>
+
+</div>
+
+<div class="feature-item">
+
+<h4>Premium Shawarma</h4>
+
+<p>Prepared using tender meat and aromatic spices.</p>
+
+</div>
+
+<div class="feature-item">
+
+<h4>Fresh Juices</h4>
+
+<p>Refreshing beverages crafted with quality ingredients.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== SMART PARKING SECTION STARTS HERE ===== -->
+    <section id="parking">
+
+<style>
+
+.services-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:60px;
+
+}
+
+.service-card{
+
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.35s;
+border-top:5px solid #d4af37;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.service-icon{
+
+font-size:42px;
+margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+margin-bottom:18px;
+color:#0b1f3a;
+font-size:24px;
+
+}
+
+.service-card p{
+
+line-height:1.8;
+color:#666;
+
+}
+
+.parking-banner{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:80px;
+
+}
+
+.parking-banner img{
+
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.parking-content h2{
+
+font-size:46px;
+margin-bottom:25px;
+color:#0b1f3a;
+
+}
+
+.parking-content p{
+
+line-height:1.9;
+color:#555;
+
+}
+
+@media(max-width:900px){
+
+.parking-banner{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<div class="parking-banner">
+
+<div class="parking-content">
+
+<h2>Smart Parking Solutions</h2>
+
+<p>
+
+Delivering comprehensive parking management solutions through
+innovation, smart technologies, operational excellence and customer
+focused services. Our solutions are designed to improve safety,
+efficiency and overall parking experiences while supporting
+modern infrastructure.
+
+</p>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">🚗</div>
+
+<h3>Operation & Maintenance</h3>
+
+<p>
+
+Professional operation and maintenance of parking facilities to ensure smooth and efficient daily performance.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🛰️</div>
+
+<h3>Smart Parking Solutions</h3>
+
+<p>
+
+Technology driven parking solutions designed to improve convenience, accessibility and operational efficiency.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🖥️</div>
+
+<h3>Parking Management System</h3>
+
+<p>
+
+Integrated parking management systems providing control, monitoring and optimized parking operations.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🚦</div>
+
+<h3>Traffic Crowd Control</h3>
+
+<p>
+
+Efficient traffic management solutions supporting organized vehicle movement and improved safety.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🏢</div>
+
+<h3>Parking Facility Design</h3>
+
+<p>
+
+Planning, design and development of parking facilities with modern engineering practices.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🅿️</div>
+
+<h3>Multi Level Parking</h3>
+
+<p>
+
+Advanced multi level parking systems that maximize available space while improving accessibility.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">📷</div>
+
+<h3>Parking Enforcement</h3>
+
+<p>
+
+Modern parking enforcement systems supporting efficient operations and better compliance.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">🛠️</div>
+
+<h3>Engineering & Integration</h3>
+
+<p>
+
+Engineering services, installation, commissioning and complete system integration solutions.
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">⚙️</div>
+
+<h3>Technical Support</h3>
+
+<p>
+
+Maintenance, technical support, outsourcing and logistics services for reliable long term operations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================
+SERVICE SECTORS
+========================================= -->
+
+<section id="services">
+
+<style>
+
+.sector-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:25px;
+
+}
+
+.sector{
+
+background:white;
+padding:35px 20px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.sector:hover{
+
+background:#0b1f3a;
+color:white;
+transform:translateY(-8px);
+
+}
+
+.sector span{
+
+display:block;
+font-size:42px;
+margin-bottom:18px;
+
+}
+
+</style>
+
+<div class="title">
+
+<h2>Service Sectors</h2>
+
+<p>
+
+Supporting a wide range of industries with professional solutions and operational excellence.
+
+</p>
+
+</div>
+
+<div class="sector-grid">
+
+<div class="sector">
+
+<span>🎉</span>
+
+Events
+
+</div>
+
+<div class="sector">
+
+<span>✈️</span>
+
+Airports
+
+</div>
+
+<div class="sector">
+
+<span>🏨</span>
+
+Hotels
+
+</div>
+
+<div class="sector">
+
+<span>🚌</span>
+
+Transport
+
+</div>
+
+<div class="sector">
+
+<span>🏢</span>
+
+Business Parks
+
+</div>
+
+<div class="sector">
+
+<span>🏥</span>
+
+Hospitals
+
+</div>
+
+<div class="sector">
+
+<span>🛍️</span>
+
+Shopping Centers
+
+</div>
+
+<div class="sector">
+
+<span>🎤</span>
+
+Conference
+
+</div>
+
+<div class="sector">
+
+<span>🚦</span>
+
+Traffic
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== TESTIMONIALS SECTION STARTS HERE ===== --><section id="testimonials">
+
+<style>
+
+.testimonial-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+
+}
+
+.testimonial{
+
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+transition:.35s;
+position:relative;
+
+}
+
+.testimonial:hover{
+
+transform:translateY(-10px);
+
+}
+
+.quote{
+
+font-size:60px;
+color:#d4af37;
+line-height:1;
+margin-bottom:20px;
+
+}
+
+.testimonial h4{
+
+margin-top:25px;
+color:#0b1f3a;
+
+}
+
+.testimonial small{
+
+color:#888;
+
+}
+
+.testimonial p{
+
+line-height:1.9;
+color:#555;
+
+}
+
+</style>
+
+<div class="title">
+
+<h2>Customer Testimonials</h2>
+
+<p>
+
+Experiences shared by satisfied customers.
+
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial">
+
+<div class="quote">“</div>
+
+<p>
+
+Marmasha brings the essence of Arabian cuisine to life.
+The shawarma and juices are simply amazing.
+I highly recommend their Sharouk Shawarma.
+
+</p>
+
+<h4>Yunus Y.</h4>
+
+<small>A Flavour Explosion</small>
+
+</div>
+
+<div class="testimonial">
+
+<div class="quote">“</div>
+
+<p>
+
+Took me back to my childhood.
+The shawarma here is the real deal,
+and the fresh juices are just the icing on the cake.
+
+</p>
+
+<h4>Ahmed M.</h4>
+
+<small>A Must Visit in Balad</small>
+
+</div>
+
+<div class="testimonial">
+
+<div class="quote">“</div>
+
+<p>
+
+Marmasha's attention to detail is impressive.
+From the quality of their shawarma to the freshness
+of their juices, you can taste the dedication.
+
+</p>
+
+<h4>Abdul Q.</h4>
+
+<small>A True Gem</small>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+CONTACT
+========================== -->
+
+<section id="contact">
+
+<style>
+
+.contact-wrap{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.contact-info h2{
+
+font-size:42px;
+margin-bottom:25px;
+color:#0b1f3a;
+
+}
+
+.contact-info p{
+
+line-height:1.9;
+margin-bottom:20px;
+color:#555;
+
+}
+
+.contact-box{
+
+background:white;
+padding:18px 25px;
+margin-bottom:18px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.contact-box strong{
+
+display:block;
+margin-bottom:6px;
+color:#0b1f3a;
+
+}
+
+.contact-form{
+
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+padding:16px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+
+}
+
+.contact-form textarea{
+
+height:160px;
+resize:none;
+
+}
+
+.contact-form button{
+
+background:#0b1f3a;
+color:white;
+border:none;
+padding:16px 35px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+background:#d4af37;
+
+}
+
+@media(max-width:900px){
+
+.contact-wrap{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<div class="title">
+
+<h2>Contact Us</h2>
+
+<p>
+
+We welcome the opportunity to discuss your business requirements.
+
+</p>
+
+</div>
+
+<div class="contact-wrap">
+
+<div class="contact-info">
+
+<h2>Let's Start a Conversation</h2>
+
+<p>
+
+Whether your needs involve hospitality services,
+parking management,
+or operational support,
+our team is ready to assist.
+
+</p>
+
+<div class="contact-box">
+
+<strong>Location</strong>
+
+Al Balad, Jeddah
+
+</div>
+
+<div class="contact-box">
+
+<strong>Email</strong>
+
+waheed@jamjoomcom.com
+
+</div>
+
+<div class="contact-box">
+
+<strong>Business Hours</strong>
+
+Sunday to Thursday
+
+</div>
+
+</div>
+
+<div class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Write your message..."></textarea>
+
+<button>
+
+Send Message
+
 </button>
 
 </div>
 
-<!-- ABOUT -->
+</div>
 
-<div id="about" class="page">
+</section>
 
-    <h1>About Us</h1>
+<!-- ==========================
+FOOTER
+========================== -->
 
-    <p>
-        Marmasha for Catering Services provides professional catering
-        solutions tailored for corporate events, private gatherings,
-        institutions, and special occasions while maintaining the highest
-        standards of quality and customer satisfaction.
-    </p>
+<footer>
+
+<style>
+
+footer{
+
+background:#081223;
+color:white;
+padding:70px 8% 30px;
+
+}
+
+.footer-grid{
+
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:50px;
+
+}
+
+.footer-grid h3{
+
+margin-bottom:20px;
+
+}
+
+.footer-grid p{
+
+line-height:1.9;
+opacity:.8;
+
+}
+
+.footer-grid ul{
+
+padding:0;
+
+}
+
+.footer-grid li{
+
+margin-bottom:12px;
+
+}
+
+.footer-grid a{
+
+color:white;
+opacity:.8;
+
+}
+
+.footer-grid a:hover{
+
+color:#d4af37;
+
+}
+
+.footer-bottom{
+
+text-align:center;
+padding-top:35px;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,.15);
+opacity:.7;
+
+}
+
+@media(max-width:900px){
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Prime Solutions</h3>
+
+<p>
+
+Delivering professional hospitality experiences,
+innovative parking management,
+and customer focused business solutions.
+
+</p>
 
 </div>
 
-<!-- SERVICES -->
+<div>
 
-<div id="services" class="page">
+<h3>Quick Links</h3>
 
-    <h1>Our Services</h1>
+<ul>
 
-    <p>
-        We offer complete catering solutions including event catering,
-        corporate meals, hospitality services, menu planning, and customized
-        food services designed to meet every client's unique requirements.
-    </p>
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#divisions">Divisions</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Business Areas</h3>
+
+<ul>
+
+<li>Hospitality</li>
+
+<li>Parking Management</li>
+
+<li>Smart Solutions</li>
+
+<li>Operations</li>
+
+<li>Support Services</li>
+
+</ul>
 
 </div>
 
-<!-- CONTACT -->
+</div>
 
-<div id="contact" class="page">
+<div class="footer-bottom">
 
-    <h1>Contact Us</h1>
-
-    <p>
-        We'd love to hear from you.
-        Contact Marmasha for Catering Services for inquiries,
-        quotations, or to discuss your upcoming event.
-    </p>
+© 2026 Prime Solutions. All Rights Reserved.
 
 </div>
+
+</footer>
+
+<button id="topBtn">↑</button>
+
+<style>
+
+#topBtn{
+
+position:fixed;
+bottom:30px;
+right:30px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+</style>
 
 <script>
 
-function showPage(pageId){
+const topBtn=document.getElementById("topBtn");
 
-    const pages=document.querySelectorAll(".page");
+window.onscroll=function(){
 
-    pages.forEach(page=>{
-        page.classList.remove("active");
-    });
+if(window.scrollY>400){
 
-    document.getElementById(pageId).classList.add("active");
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
 }
 
 </script>
 
 </body>
 </html>
-```
